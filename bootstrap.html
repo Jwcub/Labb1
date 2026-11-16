@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="sv" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test av bootstrap</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="beige-bg">
+    <div class="d-flex flex-column container mt-5 gap-3">
+      <header class="d-flex flex-column gap-4 py-8">
+        <h1 class="text-center">Utvärdering av ramverk</h1>
+
+        <nav class="nav align-self-center">
+          <a class="nav-link" href="/index.html">Introduktion</a>
+          <a class="nav-link active" aria-current="page" href="/bootstrap.html"
+            >Bootstrap</a
+          >
+          <a class="nav-link" href="/tailwind.html">Tailwind</a>
+        </nav>
+      </header>
+
+      <main class="rounded-9 bg-white p-9">
+        <h2>Bootstrap</h2>
+        <p>
+          Bootstap (tidigare Twitter Bootstrap) är ett gratis open-source
+          ramverk för CSS. Det är ett responsivt ramverk skapat med filosofin
+          mobile-first och lämpar sig väl för frontend-utveckling. Ramverket
+          innehåller färdiga komponenter och teman för typografi, formulär,
+          knappar, navigation, med mera. (
+          <a
+            href="https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)"
+          >
+            Wikipedia
+          </a>
+          , 2026)
+        </p>
+
+        <h3>Utveckling med Bootstrap (mina erfarenheter)</h3>
+        <p>
+          Det jag upplevde som positivt med att använda Bootstrap är att det
+          finns många färdiga komponenter. Det gör att utvecklingen av
+          webbplatser och applikationer går snabbare, så länge som man inte vill
+          ändra för mycket i utseendet. Direkt som jag började försöka att
+          anpassa utseendet på webbplatsen så blev det mycket svårare. Jag fick
+          krångla otroligt mycket bara för att lyckas ändra bakgrundsfärgen på
+          min webbplats. Jag tyckte dessutom att dokumentationen var lite rörig.
+          Jag behövde läsa igenom dokumentationen flera gånger och tillslut ta
+          hjälp av AI innan jag lyckades att få ramverket att fungera som det
+          skulle. Naturligtvis blir det enklare ju mer man använder det, men det
+          fanns en viss tröskel.
+        </p>
+
+        <h3>Några exempel på komponenter:</h3>
+        <p>Exempel på tabeller och formulär i Bootstrap</p>
+
+        <h4>Tabell över Game of Thrones säsonger</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Säsong</th>
+              <th scope="col">Avsnitt</th>
+              <th scope="col">Premiär</th>
+              <th scope="col">Sista avsnitt</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>10</td>
+              <td>17 april 2011</td>
+              <td>19 juni 2011</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>10</td>
+              <td>1 april 2012</td>
+              <td>3 juni 2012</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>10</td>
+              <td>31 mars 2013</td>
+              <td>9 juni 2013</td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>10</td>
+              <td>6 april 2014</td>
+              <td>15 juni 2014</td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>10</td>
+              <td>12 april 2015</td>
+              <td>14 juni 2015</td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>10</td>
+              <td>24 april 2016</td>
+              <td>26 juni 2016</td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>7</td>
+              <td>7 juli 2017</td>
+              <td>27 augusti 2017</td>
+            </tr>
+            <tr>
+              <th scope="row">8</th>
+              <td>6</td>
+              <td>14 april 2019</td>
+              <td>19 maj 2019</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br />
+
+        <h4>Lägg till/Ändra säsong</h4>
+        <form>
+          <div class="mb-3">
+            <label for="season" class="form-label"> Avsnitt </label>
+            <select class="form-control" id="season">
+              <option>Säsong 1</option>
+              <option>Säsong 2</option>
+              <option>Säsong 3</option>
+              <option>Säsong 4</option>
+              <option>Säsong 5</option>
+              <option>Säsong 6</option>
+              <option>Säsong 7</option>
+              <option>Säsong 8</option>
+              <option>Säsong 9</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="episodes" class="form-label"> Avsnitt </label>
+            <input type="number" class="form-control" id="episodes" />
+          </div>
+          <div class="mb-3">
+            <label for="premiere" class="form-label"> Premiär </label>
+            <input type="date" class="form-control" id="premiere" />
+          </div>
+          <div class="mb-3">
+            <label for="seasonFinale" class="form-label"> Premiär </label>
+            <input type="date" class="form-control" id="seasonFinale" />
+          </div>
+          <div class="form-field mb-3">
+            <input type="checkbox" id="confirmed" class="check" />
+            <label for="confirmed">Bekräftad av produktionsbolag</label>
+          </div>
+
+          <button type="submit" class="btn-solid theme-primary">Submit</button>
+        </form>
+      </main>
+
+      <span class="align-self-center">&copy; Kevin Maninnerby</span>
+    </div>
+    <script
+      type="module"
+      src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  </body>
+</html>

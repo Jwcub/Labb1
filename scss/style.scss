@@ -1,0 +1,17 @@
+@use "../node_modules/bootstrap/scss/bootstrap.scss";
+
+:root {
+  --bs-primary: #5d866c;
+  --bs-body-bg: #f5f5f0;
+  --bs-border-radius: 0.5rem;
+}
+
+.beige-bg {
+  background-color: var(--bs-body-bg);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background-color: var(--bs-primary);
+  color: white;
+}

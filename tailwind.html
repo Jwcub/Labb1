@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test av Tailwind</title>
+    <link href="/src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="lg container mx-auto max-w-3xl flex flex-col gap-3">
+      <header class="flex flex-col gap-4 py-10 text-center">
+        <h1>Utvärdering av ramverk</h1>
+        <nav>
+          <ul
+            class="flex list-none justify-center gap-4 text-sm font-semibold uppercase"
+          >
+            <li><a class="nav-link" href="/index.html">Introduktion</a></li>
+            <li><a class="nav-link" href="/bootstrap.html">Bootstrap</a></li>
+            <li>
+              <a class="nav-link active" href="/tailwind.html">Tailwind</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="rounded-2xl bg-white px-10 py-5">
+        <h2>Tailwind CSS</h2>
+        <p>
+          Tailwind CSS är ett gratis open-source ramverk för CSS. Tailwind
+          består, till skillnad från många andra ramverk, inte av på förhand
+          definerade komponenter såsom menyer, knappar och tabeller. Istället
+          bygger Tailwind på att skapa en lista med hjälpklasser som kan
+          kombineras för att uppnå önskat utseende. Detta resulterar i att den
+          mesta av CSS-utvecklingen sker i HTML-dokumentet. (<a
+            href="https://en.wikipedia.org/wiki/Tailwind_CSS"
+            >Wikipedia</a
+          >, 2026)
+        </p>
+
+        <h3>Utveckling i Tailwind CSS (mina erfarenheter)</h3>
+        <p>
+          Jag tycker att Tailwind CSS har en tydlig och lättläst dokumentation.
+          Ramverket har en annorlunda installationsmetod där man installerar en
+          CLI, men instruktionerna är väldigt tydliga och enkla att följa. Jag
+          valde dessutom att installera Tailwind CSS IntelliSense samt Tailwinds
+          tillägg för Prettier för ännu enklare utveckling i ramverket. Det tar
+          ett tag innan man lär sig klasserna, men har man dokumentationen öppen
+          så funkar sökfunktionen väldigt bra för att få fram klassnamn.
+          Generellt tycker jag att utvecklingen är Tailwind är smidig. Det som
+          är negativt är att man inte får något gratis. Man behöver styla alla
+          element. Jag tycker också att det kan bli mycket repetitivt, där vissa
+          koder behöver skrivas in flera gånger. Det som dock verkar väldigt
+          smidigt är att man kan skapa egna klasser i CSS-filen, så vill jag
+          återanvända samma CSS till flera element kan jag bara ange den egna
+          klassen.
+        </p>
+
+        <h3>Några exempel på komponenter:</h3>
+        <h4>Tabell över Game of Thrones säsonger</h4>
+
+        <div class="relative overflow-x-auto">
+    <table class="w-full text-left rtl:text-right text-body">
+        <thead class="bg-neutral-secondary-soft border-b rounded-base border-default">
+            <tr>
+              <th scope="col" class="px-6 py-3 font-semibold">Säsong</th>
+              <th scope="col" class="px-6 py-3 font-semibold">Avsnitt</th>
+              <th scope="col" class="px-6 py-3 font-semibold">Premiär</th>
+              <th scope="col" class="px-6 py-3 font-semibold">Sista avsnitt</th>
+            </tr>
+          </thead>
+          <tr>
+              <td scope="row">1</td>
+              <td>10</td>
+              <td>17 april 2011</td>
+              <td>19 juni 2011</td>
+            </tr>
+            <tr>
+              <td scope="row">2</td>
+              <td>10</td>
+              <td>1 april 2012</td>
+              <td>3 juni 2012</td>
+            </tr>
+            <tr>
+              <td scope="row">3</td>
+              <td>10</td>
+              <td>31 mars 2013</td>
+              <td>9 juni 2013</td>
+            </tr>
+            <tr>
+              <td scope="row">4</td>
+              <td>10</td>
+              <td>6 april 2014</td>
+              <td>15 juni 2014</td>
+            </tr>
+            <tr>
+              <td scope="row">5</td>
+              <td>10</td>
+              <td>12 april 2015</td>
+              <td>14 juni 2015</td>
+            </tr>
+            <tr>
+              <td scope="row">6</td>
+              <td>10</td>
+              <td>24 april 2016</td>
+              <td>26 juni 2016</td>
+            </tr>
+            <tr>
+              <td scope="row">7</td>
+              <td>7</td>
+              <td>7 juli 2017</td>
+              <td>27 augusti 2017</td>
+            </tr>
+            <tr>
+              <td scope="row">8</td>
+              <td>6</td>
+              <td>14 april 2019</td>
+              <td>19 maj 2019</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+
+        <br />
+
+        <h4>Lägg till/Ändra säsong</h4>
+        <form>
+          <div class="mb-3">
+            <label for="season" class="form-label"> Avsnitt </label>
+            <select class="w-80 block border border-gray-300 py-2 px-4 rounded-md" id="season">
+              <option>Säsong 1</option>
+              <option>Säsong 2</option>
+              <option>Säsong 3</option>
+              <option>Säsong 4</option>
+              <option>Säsong 5</option>
+              <option>Säsong 6</option>
+              <option>Säsong 7</option>
+              <option>Säsong 8</option>
+              <option>Säsong 9</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="episodes" class="block">Avsnitt</label>
+            <input type="number" class="w-80 block border border-gray-300 py-2 px-4 rounded-md" id="episodes" />
+          </div>
+          <div class="mb-3">
+            <label for="premiere" class="form-label"> Premiär </label>
+            <input type="date" class="w-80 block border border-gray-300 py-2 px-4 rounded-md" id="premiere" />
+          </div>
+          <div class="mb-3">
+            <label for="seasonFinale" class="form-label"> Premiär </label>
+            <input type="date" class="w-80 block border border-gray-300 py-2 px-4 rounded-md" id="seasonFinale" />
+          </div>
+          <div class="form-field mb-3">
+            <input type="checkbox" id="confirmed" class="border-gray-300" />
+            <label for="confirmed">Bekräftad av produktionsbolag</label>
+          </div>
+
+          <button type="submit" class="bg-[#5d866c] text-white py-2 px-4 rounded-2xl">Submit</button>
+        </form>
+      </main>
+
+      <span class="self-center">&copy; Kevin Maninnerby</span>
+
+    </div>
+  </body>
+</html>
